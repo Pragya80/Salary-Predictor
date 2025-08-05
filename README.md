@@ -21,8 +21,8 @@ Clone the repository:
 
 Bash
 
-git clone [https://github.com/Pragya80/Salary-Predictor]
-cd Salary-Predictor
+1. git clone [https://github.com/Pragya80/Salary-Predictor]
+2. cd Salary-Predictor
 
 Install dependencies:
 Make sure you have Python installed. Then, install the required libraries using the requirements.txt file.
