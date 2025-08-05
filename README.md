@@ -1,4 +1,4 @@
-# Salary-Predictor
+# Salary-Predictor 
 
 It predicts an employee's salary based on several key factors. The application uses a pre-trained machine learning model to provide an estimated salary, making it a useful tool for salary benchmarking and analysis.
 
