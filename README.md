@@ -38,6 +38,7 @@ streamlit run app.py
 Your application will open in a new tab in your web browser.
 
 📁File Structure
+
 app.py: The main Python script that contains the Streamlit application logic, user interface, and model prediction code.
 
 salary_model.pkl: The pickled file containing the trained scikit-learn Linear Regression model used for salary prediction.
