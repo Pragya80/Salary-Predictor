@@ -1,24 +1,23 @@
+
 import streamlit as st
 import pickle
 import numpy as np
 
-# Load model and encoders separately
+# Load model and all encoders from a single file
 @st.cache_resource
-def load_model():
+def load_assets():
+    # Load the model
     with open("salary_model.pkl", "rb") as f:
         model = pickle.load(f)
-    return model
+    
+    # Load all encoders as a single object from the file
+    with open("encoders.pkl", "rb") as f:
+        encoders = pickle.load(f)
+    
+    return model, encoders[0], encoders[1], encoders[2]
 
-@st.cache_resource
-def load_encoder(path):
-    with open(path, "rb") as f:
-        encoder = pickle.load(f)
-    return encoder
-
-model = load_model()
-le_gender = load_encoder("le_gender.pkl")
-le_edu = load_encoder("le_edu.pkl")
-le_job = load_encoder("le_job.pkl")
+# Load the model and encoders
+model, le_gender, le_edu, le_job = load_assets()
 
 # Streamlit UI
 st.title("💼 Employee Salary Predictor")
